@@ -1,8 +1,8 @@
-FROM alpine:3.18
+FROM alpine:3.20
 
-ARG PB_VERSION=0.26.8
+RUN apk add --no-cache wget unzip ca-certificates
 
-RUN apk add --no-cache ca-certificates unzip
+ARG PB_VERSION=0.29.3
 
 WORKDIR /pb
 
@@ -11,7 +11,7 @@ RUN wget -O /tmp/pb.zip https://github.com/pocketbase/pocketbase/releases/downlo
   && chmod +x /pb/pocketbase \
   && rm -f /tmp/pb.zip
 
-COPY . /pb
+COPY . .
 
 EXPOSE 8080
 
