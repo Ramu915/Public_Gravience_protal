@@ -121,7 +121,7 @@ export function Navbar() {
       </div>
 
       {open && mounted && (
-        <div className="md:hidden border-t border-border bg-background">
+        <div className="md:hidden border-t border-border bg-blue">
           <div className="mx-auto max-w-7xl px-4 py-3 flex flex-col gap-1">
             {navLinks.map((l) => (
               <Link

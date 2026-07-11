@@ -60,7 +60,7 @@ function LoginPage() {
 
   return (
     <Layout>
-      <div className="mx-auto max-w-md w-full px-4 py-12 md:py-16 lg:py-20">
+      <div className="mx-auto max-w-md w-full px-4 py-12 md:py-16 lg:py-20 bg-blue-500 rounded-xl">
         <div className="text-center mb-8">
           <div className="inline-flex h-12 md:h-14 w-12 md:w-14 items-center justify-center rounded-lg md:rounded-xl bg-primary text-primary-foreground mb-4 shadow-[var(--shadow-soft)]">
             <LogIn className="h-5 md:h-6 w-5 md:w-6" />
@@ -69,7 +69,7 @@ function LoginPage() {
           <p className="mt-2 text-sm md:text-base text-muted-foreground">Sign in to file and track your grievances.</p>
         </div>
 
-        <Card className="border-border shadow-[var(--shadow-soft)]">
+        <Card className="border-border shadow-[var(--shadow-soft)] !bg-blue-50">
           <CardContent className="p-5 md:p-7">
             <form onSubmit={onSubmit} className="space-y-5">
               {error && (

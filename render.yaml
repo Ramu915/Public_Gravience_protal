@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: pgms-pocketbase
+    env: docker
+    dockerfilePath: ./pocketbase/Dockerfile
+    dockerContext: ./pocketbase
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: PORT
+        value: 8080
